@@ -1,5 +1,3 @@
-var x = 10;
-var y = 20;
-var z = x + y;
+var x = 10; y = 20; z = x + y;
 
 document.getElementById("saida").innerHTML = z;
