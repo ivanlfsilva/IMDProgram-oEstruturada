@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Tabuada com Recursão</h1>
+    Valor desejado <input type="number" id="entrada">
+    <button onclick="tabuada()",onclick="limpar()">exibir tabuada</button>
+    <p id="saida"></p>
+    <script>
+
+        var numeroEstatico = 10;
+        var resposta = "";
+        var numeroRecebido;
+        function tabuada() {
+            
+            numeroRecebido = Number(document.getElementById('entrada').value)
+
+            if (numeroEstatico > 0) {
+                resposta += `${numeroRecebido}` + " * " + `${numeroEstatico}` + " = " + `${numeroRecebido * numeroEstatico}` + "<br>";
+
+                numeroEstatico--;
+
+
+                return tabuada();
+
+
+
+            } else if (numeroEstatico == 0) {
+                document.getElementById("saida").innerHTML = resposta;
+                numeroEstatico = 10;
+                resposta = "";
+                return resposta;
+
+            }
+
+
+
+        }
+        
+
+
+    </script>
+</body>
+
+</html>
